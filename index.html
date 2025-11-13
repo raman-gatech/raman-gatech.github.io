@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ramanathan | Portfolio</title>
+    <title>Ramanathan Swaminathan | ML Researcher</title>
 
     <style>
         body {
@@ -11,73 +11,77 @@
             font-family: "Inter", sans-serif;
             background: #0f0f0f;
             color: #ffffff;
+            overflow-x: hidden;
         }
 
-        /* NAVBAR */
+        /* Navbar */
         nav {
             display: flex;
             justify-content: space-between;
-            padding: 20px 60px;
+            align-items: center;
+            padding: 20px 50px;
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 10;
-            background: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.55);
             backdrop-filter: blur(10px);
         }
 
         nav a {
             color: #ffffff;
-            text-decoration: none;
             margin-left: 30px;
+            text-decoration: none;
             font-size: 16px;
-            font-weight: 500;
+            transition: 0.2s;
         }
 
         nav a:hover {
-            color: #00e0ff;
+            color: #00eaff;
         }
 
-        /* HERO SECTION */
+        /* Hero */
         .hero {
             height: 100vh;
             display: flex;
             align-items: center;
             padding: 0 60px;
-            background: linear-gradient(135deg, #0a0f24, #000000);
+            background: linear-gradient(135deg, #0b1122, #000000);
         }
 
         .hero h1 {
-            font-size: 64px;
-            margin: 0;
+            font-size: 58px;
             line-height: 1.2;
+            margin: 0;
         }
 
         .hero p {
             font-size: 20px;
+            color: #cccccc;
             margin-top: 15px;
-            color: #cfcfcf;
+            max-width: 700px;
         }
 
         .btn {
             margin-top: 30px;
-            padding: 12px 30px;
+            padding: 14px 32px;
             font-size: 18px;
-            border-radius: 8px;
             border: none;
+            border-radius: 8px;
             cursor: pointer;
-            background: #00e0ff;
-            color: #000;
+            background: #00eaff;
+            color: black;
             font-weight: 600;
+            transition: 0.25s;
         }
 
         .btn:hover {
-            background: #00cbe6;
+            background: #00cfe0;
         }
 
-        /* SECTIONS */
+        /* Sections */
         section {
-            padding: 100px 60px;
+            padding: 120px 60px;
         }
 
         h2 {
@@ -85,182 +89,269 @@
             margin-bottom: 20px;
         }
 
-        /* ABOUT */
+        /* About */
         .about-text {
-            max-width: 700px;
+            max-width: 850px;
             font-size: 20px;
-            line-height: 1.6;
-            color: #dcdcdc;
+            color: #d0d0d0;
+            line-height: 1.65;
         }
 
-        /* SKILLS GRID */
+        /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            margin-top: 40px;
+            margin-top: 30px;
         }
 
         .skill-box {
+            background: #151515;
             padding: 20px;
-            background: #161616;
-            border-radius: 10px;
+            border-radius: 12px;
             text-align: center;
-            font-size: 18px;
             border: 1px solid #222;
+            font-size: 18px;
         }
 
-        /* PROJECTS */
+        /* Projects */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
 
         .project-card {
-            background: #161616;
-            padding: 20px;
+            background: #151515;
+            padding: 25px;
             border-radius: 12px;
             border: 1px solid #222;
+            transition: 0.25s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #00eaff;
         }
 
         .project-card h3 {
-            font-size: 24px;
-            margin: 0 0 10px 0;
+            margin: 0;
+            font-size: 26px;
         }
 
         .project-card p {
-            font-size: 16px;
-            color: #c8c8c8;
+            color: #cccccc;
+            font-size: 17px;
+            margin: 10px 0;
         }
 
         .project-card a {
-            color: #00e0ff;
+            color: #00eaff;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
         }
 
-        /* CONTACT */
+        /* Publications */
+        .pub {
+            font-size: 18px;
+            margin-bottom: 18px;
+            color: #cfcfcf;
+        }
+
+        /* Contact */
         .contact-box {
             font-size: 22px;
-            margin-top: 20px;
+            line-height: 1.8;
         }
 
         .contact-box a {
-            color: #00e0ff;
+            color: #00eaff;
             text-decoration: none;
         }
 
-        /* FOOTER */
+        /* Footer */
         footer {
-            padding: 20px;
             text-align: center;
+            padding: 20px;
             background: #000;
-            color: #888;
+            color: #777;
             font-size: 14px;
         }
-
     </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- Navbar -->
     <nav>
-        <div style="font-weight:700; font-size:20px;">Ramanathan</div>
+        <div style="font-size: 22px; font-weight: 700;">Ramanathan</div>
         <div>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- Hero -->
     <div class="hero">
         <div>
-            <h1>ML Researcher & Full-Stack Engineer</h1>
-            <p>MSCS at Georgia Tech • LLM Safety • Distributed AI • Systems & SWE</p>
+            <h1>Machine Learning Researcher & LLM Systems Engineer</h1>
+            <p>
+                Graduate Researcher at Georgia Tech (DiSL Lab) working on LLM safety, 
+                LoRA-based fine-tuning, Mixture-of-Experts (MoE), federated models, 
+                and distributed AI systems. Published 5+ papers across Deep Learning, 
+                Computer Vision, and Network Security.
+            </p>
             <button class="btn" onclick="location.href='#projects'">View Projects</button>
         </div>
     </div>
 
-    <!-- ABOUT -->
+    <!-- About -->
     <section id="about">
         <h2>About Me</h2>
         <p class="about-text">
-            I'm an MSCS student at Georgia Tech focusing on Machine Learning, Distributed AI,
-            and LLM Safety. I work with DiSL Lab on building robust LLM systems, model routers,
-            expert networks, and scalable inference pipelines. I also enjoy building clean,
-            production-ready engineering systems from scratch — backend, frontend, data, infra.
+            I’m a Machine Learning researcher at the Distributed Data Intensive Systems Lab (DiSL) at 
+            Georgia Tech, advised by Prof. Ling Liu. My work focuses on LLM safety, 
+            LoRA fine-tuning, Mixture-of-Experts routing, federated learning, and scalable distributed training. <br><br>
+
+            I am pursuing the MSCS (Machine Learning specialization) with a 4.0 GPA, and have published 5+ 
+            peer-reviewed papers in deep learning, computer vision, and network security. I enjoy building 
+            elegant, efficient, and production-ready ML systems end-to-end — from data engineering to 
+            optimized inference pipelines.
         </p>
     </section>
 
-    <!-- SKILLS -->
+    <!-- Skills -->
     <section id="skills">
         <h2>Skills</h2>
 
         <div class="skills-grid">
-            <div class="skill-box">Python</div>
-            <div class="skill-box">PyTorch</div>
-            <div class="skill-box">Llama / Transformers</div>
-            <div class="skill-box">FastAPI</div>
-            <div class="skill-box">React</div>
-            <div class="skill-box">PostgreSQL</div>
-            <div class="skill-box">Docker</div>
-            <div class="skill-box">Spark</div>
-            <div class="skill-box">AWS / GCP</div>
+            <div class="skill-box">LLMs & MoE</div>
+            <div class="skill-box">LoRA Fine-Tuning</div>
+            <div class="skill-box">Distributed Training (FSDP)</div>
+            <div class="skill-box">PyTorch / TensorFlow</div>
+            <div class="skill-box">Spark / Hadoop</div>
+            <div class="skill-box">MLflow / Docker</div>
+            <div class="skill-box">AWS / Kubernetes</div>
+            <div class="skill-box">Python / C++ / Java / SQL</div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- Projects -->
     <section id="projects">
         <h2>Projects</h2>
 
         <div class="projects-grid">
+
             <div class="project-card">
-                <h3>LLM Router + MoE System</h3>
+                <h3>Router + LoRA Mixture-of-Experts LLM</h3>
                 <p>
-                    A DistilBERT-based router that dispatches queries to specialized Llama-3 experts.
-                    Features low-latency inference, LoRA-fine-tuned specializations,
-                    and production-ready FastAPI endpoints.
+                    DistilBERT router + LoRA-tuned LLaMA-3 8B experts for multi-domain reasoning.  
+                    Achieved <b>92.4% accuracy</b> and <b>0.93 macro-F1</b> across math, science, and 
+                    general tasks. Distributed inference with PyTorch FSDP + Unsloth on A100 GPUs.  
+                    Includes early federated LLM prototypes for privacy-preserving inference.
                 </p>
                 <a href="#">View Code →</a>
             </div>
 
             <div class="project-card">
-                <h3>RAG-Based Compliance Bot</h3>
+                <h3>AI Debator — Multi-Agent Debate Arena (Agora Sim)</h3>
                 <p>
-                    A full-stack policy reasoning engine with temporal filtering,
-                    pgvector semantic search, FastAPI backend, and React UI.
+                    A multi-agent AI debate environment where user topics trigger real-time 
+                    debates between AI personas. Supports bias-conditioning, async simulation loops, 
+                    argument scoring, and persona-driven rhetorical styles.  
+                    Built with FastAPI backend + interactive frontend.
+                </p>
+                <a href="#">Demo / Code →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>RAG-Based Compliance & Policy Bot</h3>
+                <p>
+                    A full-stack enterprise-grade policy compliance assistant using FastAPI, React, 
+                    pgvector semantic search, and temporal policy filtering.  
+                    Includes document chunking, embedding pipelines, query rewriting, and 
+                    audit-trace generation for enterprise settings.
                 </p>
                 <a href="#">View Code →</a>
             </div>
 
             <div class="project-card">
-                <h3>Glaucoma Detection (CNN + ViT)</h3>
+                <h3>Hybrid CNN + Self-Attention Model</h3>
                 <p>
-                    Hybrid EfficientNet-ViT model with cross-attention,
-                    ablation studies, and Grad-CAM interpretability.
+                    Developed a CNN + self-attention architecture achieving <b>98% accuracy</b> 
+                    with <b>35% fewer false positives</b> on the UNSW-NB15 intrusion dataset.  
+                    Built with MLflow, PyTorch, Dockerized pipelines.
                 </p>
-                <a href="#">View Paper →</a>
+                <a href="#">Research →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Multi-Scale Attention Network (MSAN)</h3>
+                <p>
+                    Proposed MSAN for ophthalmic imaging, improving accuracy to 92–94% 
+                    across fundus datasets. Published at IEEE ICEMCE 2023.
+                </p>
+                <a href="#">Paper →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Tire Wear Classification (1,500-image Dataset)</h3>
+                <p>
+                    Created automotive tire-wear dataset and trained ResNet50 achieving 
+                    <b>96% accuracy</b>. Includes dataset curation + preprocessing pipeline.
+                </p>
+                <a href="#">Dataset →</a>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- Publications -->
+    <section id="publications">
+        <h2>Publications</h2>
+
+        <p class="pub">
+            • <b>An Attention-Infused Deep Learning System with Grad-CAM Visualization for Early Screening of Glaucoma</b>  
+            arXiv preprint, 2025.
+        </p>
+
+        <p class="pub">
+            • <b>Building a Smarter Shield: Ensemble Learning for Multi-Class DDoS Attacks</b>  
+            IEEE ICCCNT, 2024.
+        </p>
+
+        <p class="pub">
+            • <b>Retinal Disease Diagnosis Reimagined: Multi-Scale Attention Network</b>  
+            IEEE ICEMCE, 2023.
+        </p>
+
+        <p class="pub">
+            • <b>Advancing IoT Security with a Hybrid Deep Learning Model</b>  
+            IEEE ICEMCE, 2023.
+        </p>
+
+        <p class="pub">
+            • <b>Transfer Learning Approach for Tire Wear Classification</b>  
+            IEEE ICBIR, 2023.
+        </p>
+    </section>
+
+    <!-- Contact -->
     <section id="contact">
         <h2>Contact</h2>
 
         <div class="contact-box">
-            📩 Email: <a href="mailto:ramanathan@gmail.com">ramanathan@gmail.com</a><br>
-            💼 LinkedIn: <a href="#">Your LinkedIn</a><br>
-            📁 GitHub: <a href="#">Your GitHub</a>
+            📩 Email: <a href="mailto:rswaminathan38@gatech.edu">rswaminathan38@gatech.edu</a><br>
+            🔗 LinkedIn: <a href="https://linkedin.com/in/rswami38">linkedin.com/in/rswami38</a><br>
+            📚 Google Scholar: <a href="https://scholar.google.com/citations?user=N4DCI5wAAAAJ">scholar profile</a><br>
+            📄 arXiv: <a href="https://arxiv.org/abs/2505.17808">2505.17808</a>
         </div>
     </section>
 
     <footer>
-        © 2025 Ramanathan — Built with love & coffee.
+        © 2025 Ramanathan Swaminathan — Built with passion for AI, systems, and research.
     </footer>
 
 </body>
